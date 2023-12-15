@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halal Meat Order Form</title>
+    <script type="text/javascript">
+        // ... JavaScript functions (addMeatOption, handleSubmit) as previously defined ...
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('meatOrderForm').addEventListener('submit', handleSubmit);
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Halal Meat Order Form</h2>
+
+    <form id="meatOrderForm">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <!-- Phone Number Field -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <!-- Dynamic meat options and quantity inputs -->
+        <div id="meatOptionsContainer"></div>
+        <button type="button" onclick="addMeatOption()">Add More Meat</button><br><br>
+
+        <input type="submit" value="Submit Order">
+    </form>
+
+    <script type="text/javascript">
+        // Initialize with one set of options
+        addMeatOption();
+    </script>
+
+</body>
+</html>
